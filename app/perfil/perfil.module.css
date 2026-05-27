@@ -1,0 +1,275 @@
+.main {
+  min-height: 100vh;
+  padding: 88px 24px 40px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+.cardContainer {
+  width: 100%;
+  max-width: 640px;
+  background: var(--bg-secondary);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.coverPhoto {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 24px;
+  position: relative;
+  height: 60px;
+}
+
+.avatarWrapper {
+  position: absolute;
+  top: -75px;
+  left: 24px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid var(--bg-input);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: var(--bg-input);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+  padding-bottom: 12px;
+}
+
+.editButton, .backButton, .cancelButton, .saveButton {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-color);
+}
+
+.editButton {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+}
+
+.editButton:hover {
+  background-color: var(--border-color);
+  transform: translateY(-1px);
+}
+
+.backButton {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backButton:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.cancelButton {
+  background-color: transparent;
+  color: var(--text-secondary);
+}
+
+.cancelButton:hover {
+  background-color: var(--border-color);
+}
+
+.saveButton {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+}
+
+.saveButton:hover {
+  background-color: var(--accent-hover);
+}
+
+.profileDetails {
+  padding: 24px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.username {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.bio {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 16px;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.statsContainer {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statValue {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.statLabel {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.recentActivity {
+  border-top: 1px solid var(--border-color);
+  padding: 24px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gridItem {
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  background-color: var(--border-color);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.gridItem:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 80px 16px 40px 16px;
+  }
+  .avatarWrapper {
+    width: 100px;
+    height: 100px;
+    top: -55px;
+  }
+  .profileHeader {
+    height: 50px;
+  }
+  .headerActions {
+    padding-bottom: 4px;
+  }
+  .editButton, .backButton, .cancelButton {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .coverPhoto {
+    height: 140px;
+  }
+  .statsContainer {
+    gap: 20px;
+  }
+}
