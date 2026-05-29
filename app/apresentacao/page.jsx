@@ -140,7 +140,7 @@ export default function Apresentacao() {
         <section className={styles.heroSection}>
           <div className={styles.badge}>Apresentação Prática 🎓</div>
           <h1 className={styles.title}>
-            <span>Rede Social</span> <span className={styles.gradientText}>Flow Social</span>
+            <span className={styles.gradientText}>Flow Social</span>
           </h1>
           <p className={styles.subtitle}>
             Uma demonstração interativa de engenharia web moderna com Next.js (App Router), JavaScript e CSS puro.
