@@ -195,8 +195,8 @@ export default function Home() {
                 </button>
                 <button
                   type="button"
-                  className={`${styles.presetBtn} ${selectedPresetImage === "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" ? styles.selectedPreset : ""}`}
-                  onClick={() => setSelectedPresetImage(selectedPresetImage === "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" ? "" : "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80")}
+                  className={`${styles.presetBtn} ${selectedPresetImage === "https://images.unsplash.com/photo-1693052649558-231544b17f31?q=80&w=2104&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ? styles.selectedPreset : ""}`}
+                  onClick={() => setSelectedPresetImage(selectedPresetImage === "https://images.unsplash.com/photo-1693052649558-231544b17f31?q=80&w=2104&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ? "" : "https://images.unsplash.com/photo-1693052649558-231544b17f31?q=80&w=2104&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")}
                 >
                   ☕ Café
                 </button>
