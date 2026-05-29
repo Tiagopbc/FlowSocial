@@ -32,7 +32,7 @@ export default function Header() {
         <div className={styles.logoArea}>
           <Link href="/" className={styles.logoLink}>
             <span className={styles.logoIcon}>🌊</span>
-            <span className={styles.logoText}>Flow</span>
+            <span className={styles.logoText}>Flow Social</span>
           </Link>
         </div>
         

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Flow - Sua Mini Rede Social",
+  title: "Flow Social - Sua Mini Rede Social",
   description: "Uma mini rede social moderna construída com Next.js e CSS Vanilla.",
 };
 
