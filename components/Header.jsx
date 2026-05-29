@@ -1,8 +1,31 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./Header.module.css";
 
 export default function Header() {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("flow_theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setTheme(systemPrefersDark ? "dark" : "light");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    localStorage.setItem("flow_theme", nextTheme);
+    document.documentElement.setAttribute("data-theme", nextTheme);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -20,6 +43,9 @@ export default function Header() {
           <Link href="/perfil" className={styles.navLink}>
             <span>Perfil</span>
           </Link>
+          <button onClick={toggleTheme} className={styles.themeToggle} title="Alternar Tema">
+            {theme === "dark" ? "☀️" : "🌙"}
+          </button>
         </nav>
         
         <div className={styles.userSection}>
